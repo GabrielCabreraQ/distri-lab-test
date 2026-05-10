@@ -11,7 +11,7 @@
 
 echo "Ejecutando simulación N-Body en C++..."
 # Aquí ejecutamos tu archivo real compilado
-./nbody_2d 50000 
+./nbody_2d 100000 
 
 echo "Generando gráficos de reportes..."
 # Aquí ejecutamos tus scripts de Python reales
