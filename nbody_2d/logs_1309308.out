@@ -1,0 +1,45 @@
+Ejecutando simulación N-Body en C++...
+Benchmark configuration:
+  N           = 50000
+  repetitions = 10
+  dt          = 0.010000
+  seed        = 42
+  schedule    = static
+  chunk       = 16
+  output      = /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/prueba_entorno
+
+Scaling analysis (computeAccelerations):
+threads time_mean time_std speedup efficiency
+1 37.351126 0.016402 1.000000 1.000000
+2 18.686793 0.006482 1.998798 0.999399
+3 12.459631 0.004957 2.997771 0.999257
+4 9.375835 0.020788 3.983765 0.995941
+5 7.520434 0.008237 4.966618 0.993324
+6 6.271246 0.004231 5.955934 0.992656
+7 7.607914 0.005041 4.909510 0.701359
+8 6.667004 0.007429 5.602386 0.700298
+9 5.945010 0.004741 6.282769 0.698085
+10 6.014554 0.002604 6.210124 0.621012
+11 5.729772 0.004462 6.518780 0.592616
+12 5.397462 0.000808 6.920128 0.576677
+
+Scaling analysis (full Euler step):
+threads time_mean time_std speedup efficiency
+1 37.336154 0.029651 1.000000 1.000000
+2 18.690389 0.009713 1.997612 0.998806
+3 12.461133 0.008948 2.996209 0.998736
+4 9.373218 0.024965 3.983280 0.995820
+5 7.520752 0.010372 4.964417 0.992883
+6 6.265993 0.009079 5.958537 0.993090
+7 7.605476 0.005571 4.909115 0.701302
+8 6.668569 0.004805 5.598826 0.699853
+9 6.001230 0.121552 6.221416 0.691268
+10 6.020136 0.006753 6.201879 0.620188
+11 5.733509 0.016269 6.511920 0.591993
+12 5.395144 0.001549 6.920326 0.576694
+
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/prueba_entorno_scaling.dat
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/prueba_entorno_scaling_fullstep.dat
+Generando gráficos de reportes...
+For performance plot you must provide --scaling and --schedules.
+Generando gráficos de escalabilidad...

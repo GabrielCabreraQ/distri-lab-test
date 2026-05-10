@@ -3,7 +3,7 @@
 #SBATCH --partition=GPU
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=12
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:1
 #SBATCH --time=04:00:00
@@ -11,7 +11,7 @@
 
 echo "Ejecutando simulación N-Body en C++..."
 # El programa generará los .dat con el prefijo "prueba_entorno"
-./nbody_2d -scaling -N 100000 -iters 10 -threads 1,2,4,8 -schedule static -chunk 16 -output prueba_entorno
+./nbody_2d -scaling -N 50000 -iters 10 -threads 1,2,3,4,5,6,7,8,9,10,11,12 -schedule static -chunk 16 -output prueba_entorno
 
 echo "Generando gráficos de reportes..."
 # Le indicamos el nombre de salida para el gráfico de rendimiento
