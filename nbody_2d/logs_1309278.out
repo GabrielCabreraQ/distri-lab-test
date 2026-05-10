@@ -1,0 +1,67 @@
+Ejecutando simulación N-Body en C++...
+sh: 1: py: not found
+Benchmark configuration:
+  N           = 1000
+  repetitions = 10
+  dt          = 0.010000
+  seed        = 42
+  schedule    = static
+  chunk       = 16
+  output      = /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/benchmark
+
+Scaling analysis (computeAccelerations):
+threads time_mean time_std speedup efficiency
+1 0.005553 0.000093 1.000000 1.000000
+2 0.002798 0.000085 1.984379 0.992190
+4 0.002478 0.000027 2.240762 0.560191
+8 0.003201 0.001553 1.734533 0.216817
+
+Scaling analysis (full Euler step):
+threads time_mean time_std speedup efficiency
+1 0.005551 0.000079 1.000000 1.000000
+2 0.002767 0.000008 2.006009 1.003004
+4 0.002472 0.000023 2.245564 0.561391
+8 0.002749 0.000299 2.019083 0.252385
+
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/benchmark_scaling.dat
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/benchmark_scaling_fullstep.dat
+Plot script: OK
+
+Schedule comparison (computeAccelerations):
+schedule chunk threads time_mean time_std
+static 1 4 0.002433 0.000062
+static 4 4 0.002430 0.000005
+static 16 4 0.002471 0.000012
+static 64 4 0.002475 0.000017
+dynamic 1 4 0.002414 0.000003
+dynamic 4 4 0.002426 0.000003
+dynamic 16 4 0.002461 0.000004
+dynamic 64 4 0.002465 0.000002
+guided 1 4 0.002410 0.000003
+guided 4 4 0.002423 0.000014
+guided 16 4 0.002460 0.000003
+guided 64 4 0.002426 0.000003
+
+Schedule comparison (full Euler step):
+schedule chunk threads time_mean time_std
+static 1 4 0.002419 0.000010
+static 4 4 0.002446 0.000039
+static 16 4 0.002472 0.000003
+static 64 4 0.002478 0.000017
+dynamic 1 4 0.002419 0.000004
+dynamic 4 4 0.002429 0.000002
+dynamic 16 4 0.002466 0.000005
+dynamic 64 4 0.002471 0.000002
+guided 1 4 0.002416 0.000005
+guided 4 4 0.002421 0.000004
+guided 16 4 0.002465 0.000004
+guided 64 4 0.002431 0.000003
+
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/benchmark_schedules.dat
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/benchmark_schedules_fullstep.dat
+Generando gráficos de reportes...
+Nothing to do. Provide --performance-output and/or --physics-output.
+Generando gráficos de escalabilidad...
+usage: plot_scaling.py [-h] --input INPUT --output OUTPUT --amdahl-output
+                       AMDAHL_OUTPUT
+plot_scaling.py: error: the following arguments are required: --input, --output, --amdahl-output

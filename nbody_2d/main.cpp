@@ -100,7 +100,6 @@ bool runPlotScript(const std::string& script_path, const std::string& dat_path, 
     const std::string amdahl_png_path = output_prefix + "_amdahl.png";
 
     const std::vector<std::string> commands = {
-        std::string("py -3 ") + quoteCommandArg(script_path),
         std::string("python3 ") + quoteCommandArg(script_path),
         std::string("python ") + quoteCommandArg(script_path)
     };
