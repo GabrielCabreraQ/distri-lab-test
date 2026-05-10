@@ -1,0 +1,32 @@
+Ejecutando simulación N-Body en C++...
+Benchmark configuration:
+  N           = 50000
+  repetitions = 10
+  dt          = 0.010000
+  seed        = 42
+  schedule    = static
+  chunk       = 16
+  output      = /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/prueba_entorno
+
+Scaling analysis (computeAccelerations):
+threads time_mean time_std speedup efficiency
+1 13.892661 0.017956 1.000000 1.000000
+2 6.949950 0.005725 1.998959 0.999479
+4 3.487419 0.004042 3.983651 0.995913
+8 3.016062 0.006294 4.606226 0.575778
+
+Scaling analysis (full Euler step):
+threads time_mean time_std speedup efficiency
+1 13.916999 0.011599 1.000000 1.000000
+2 6.967192 0.022716 1.997505 0.998752
+4 3.491200 0.004896 3.986308 0.996577
+8 3.014026 0.002384 4.617412 0.577176
+
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/prueba_entorno_scaling.dat
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/prueba_entorno_scaling_fullstep.dat
+Generando gráficos de reportes...
+Nothing to do. Provide --performance-output and/or --physics-output.
+Generando gráficos de escalabilidad...
+usage: plot_scaling.py [-h] --input INPUT --output OUTPUT --amdahl-output
+                       AMDAHL_OUTPUT
+plot_scaling.py: error: the following arguments are required: --input, --output, --amdahl-output
