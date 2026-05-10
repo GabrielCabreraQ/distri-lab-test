@@ -10,12 +10,13 @@
 #SBATCH --output=logs_%j.out
 
 echo "Ejecutando simulación N-Body en C++..."
-# Aquí ejecutamos tu archivo real compilado
-./nbody_2d -scaling -N 50000 -iters 10 -threads 1,2,4,8 -schedule static -chunk 16 -output prueba_entorno 
+# El programa generará los .dat con el prefijo "prueba_entorno"
+./nbody_2d -scaling -N 1000 -iters 10 -threads 1,2,4,8 -schedule static -chunk 16 -output prueba_entorno
 
 echo "Generando gráficos de reportes..."
-# Aquí ejecutamos tus scripts de Python reales
-python3 plot_reports.py
+# Le indicamos el nombre de salida para el gráfico de rendimiento
+python3 plot_reports.py --performance-output Resultados_Benchmark/prueba_entorno_perf.png
 
 echo "Generando gráficos de escalabilidad..."
-python3 plot_scaling.py
+# Le pasamos el .dat exacto que generó C++ y le damos nombre a las imágenes de salida
+python3 plot_scaling.py --input Resultados_Benchmark/prueba_entorno_scaling.dat --output Resultados_Benchmark/prueba_entorno_scaling.png --amdahl-output Resultados_Benchmark/prueba_entorno_amdahl.png

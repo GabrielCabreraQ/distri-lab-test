@@ -1,0 +1,29 @@
+Ejecutando simulación N-Body en C++...
+Benchmark configuration:
+  N           = 1000
+  repetitions = 10
+  dt          = 0.010000
+  seed        = 42
+  schedule    = static
+  chunk       = 16
+  output      = /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/prueba_entorno
+
+Scaling analysis (computeAccelerations):
+threads time_mean time_std speedup efficiency
+1 0.005640 0.000162 1.000000 1.000000
+2 0.002821 0.000044 1.999365 0.999683
+4 0.001494 0.000133 3.774082 0.943521
+8 0.001244 0.000032 4.534640 0.566830
+
+Scaling analysis (full Euler step):
+threads time_mean time_std speedup efficiency
+1 0.005606 0.000044 1.000000 1.000000
+2 0.002808 0.000009 1.996464 0.998232
+4 0.001459 0.000093 3.843344 0.960836
+8 0.001236 0.000004 4.536060 0.567007
+
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/prueba_entorno_scaling.dat
+Generated: /home/ceph/gcabrera/distri-lab-test/nbody_2d/Resultados_Benchmark/prueba_entorno_scaling_fullstep.dat
+Generando gráficos de reportes...
+For performance plot you must provide --scaling and --schedules.
+Generando gráficos de escalabilidad...
