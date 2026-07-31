@@ -1,0 +1,32 @@
+Benchmark configuration:
+  N           = 1000
+  repetitions = 10
+  dt          = 0.010000
+  seed        = 42
+  schedule    = static
+  chunk       = 16
+  output      = /home/ceph/gcabrera/distri-lab-2/Lab1-Distri/nbody_2d/lab2_plots/benchmark
+
+[CUDA Benchmark] Starting benchmarking suite...
+[CUDA Benchmark] Matrix Evaluation (N x blockDim.x)...
+  -> N=256 blockDim=64 (Done)
+  -> N=256 blockDim=128 (Done)
+  -> N=256 blockDim=256 (Done)
+  -> N=256 blockDim=512 (Done)
+  -> N=256 blockDim=1024 (Done)
+  -> N=512 blockDim=64 (Done)
+  -> N=512 blockDim=128 (Done)
+  -> N=512 blockDim=256 (Done)
+  -> N=512 blockDim=512 (Done)
+  -> N=512 blockDim=1024 (Done)
+  -> N=1024 blockDim=64 (Done)
+  -> N=1024 blockDim=128 (Done)
+  -> N=1024 blockDim=256 (Done)
+  -> N=1024 blockDim=512 (Done)
+  -> N=1024 blockDim=1024 (Done)
+  -> N=2000 blockDim=64 (Done)
+  -> N=2000 blockDim=128 (Done)
+  -> N=2000 blockDim=256 (Done)
+  -> N=2000 blockDim=512 (Done)
+  -> N=2000 blockDim=1024 (Done)
+[CUDA Benchmark] All .dat files generated in /home/ceph/gcabrera/distri-lab-2/Lab1-Distri/nbody_2d/lab2_plots
